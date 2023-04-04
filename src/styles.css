@@ -1,3 +1,10 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'aBeeZee';
+  src: url('../assets/ABeeZee/ABeeZee-Regular.ttf');
+  overflow-x: hidden;
+}
 body {
   font-family: sans-serif;
   overflow: hidden;
@@ -5,13 +12,102 @@ body {
 #webgi-canvas {
   width: 100%;
   height: 100%;
-  border-radius: 0.5rem;
 }
 #webgi-canvas-container{
-  width: 80vw;
-  height: 80vh;
-  margin: 10vh 10vw;
-  border-radius: 0.5rem;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  pointer-events: none;
+  z-index: -1;
+}
 
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+.tab--1{
+  height: 100vh;
+  width: 100vw;
+}
+
+header{
+  padding: 40px;
+  border-bottom: 1px solid black;
+}
+
+header ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  gap: 10px;
+  font-weight: bold;
+}
+
+.title--info{
+  color: #EC6060;
+  font-size: 8rem;
+}
+
+.first{
+  position: absolute;
+  top: 40%;
+  right: 20%;
+  transform: translateY(-40%) translateX(40%);
+  text-align: center;
+}
+
+.first:nth-child(2){
+  font-size: 30px;
+}
+
+.tab--2{
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+.second{
+  position: absolute;
+  top: 40%;
+  left: 20%;
+  transform: translateY(-40%) translateX(-20%);
+  text-align: center;
+  height: 50%;
+}
+
+.info-sign{
+  color: #EC6060;
+  font-size: 7rem;
+}
+
+.arrow--down{
+  transform: scale(1.5);
+}
+
+.tab--3{
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+  display: flex;
+  background-color: #E2E2E2;
+}
+
+.third{
+  display: flex;
+  flex-wrap:wrap;
+  padding: 0 30px;
+  gap: 40px;
+}
+
+.third li{
+  list-style: none;
+  margin-top: 5px;
+  height: 300px;
+  width: 500px;
+  border: 1px solid black;
+  flex-grow: 1;
+
+}
+
+@media only screen and (max-width:1075px) {
+  .third li{
+    margin: auto;
+  }
 }
